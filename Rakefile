@@ -56,6 +56,7 @@ desc "Generate jekyll site"
 task :generate do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
+  Rake::Task["parse_haml"].invoke
   system "compass compile --css-dir #{source_dir}/stylesheets"
   system "jekyll"
 end
@@ -79,6 +80,7 @@ end
 desc "preview the site in a web browser"
 task :preview do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  Rake::Task["parse_haml"].invoke
   puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
   system "compass compile --css-dir #{source_dir}/stylesheets" unless File.exist?("#{source_dir}/stylesheets/screen.css")
   jekyllPid = Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll --auto")
@@ -401,4 +403,14 @@ desc "list tasks"
 task :list do
   puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
   puts "(type rake -T for more detail)\n\n"
+end
+
+desc "Parse haml layouts"
+task :parse_haml do
+    print "Parsing Haml layouts..."
+    system(%{
+        cd source/_layouts/haml && 
+        for f in *.haml; do [ -e $f ] && haml $f ../${f%.haml}.html; done
+    })
+    puts "done."
 end
