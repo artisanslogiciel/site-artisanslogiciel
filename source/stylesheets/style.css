@@ -81,18 +81,18 @@ h2{
 	width: 100%;
 }
 
-#intro{
-	background:url(images/firstBG.jpg) 50% 0 no-repeat fixed;
+#slide_1{
+	background:url(images/slide_1.jpg) 50% 0 no-repeat fixed;
 	color: white;
 	height: 600px;
 	margin: 0 auto;
 	padding: 0;
 }
 
-#second{
-	background: url(images/secondBG.jpg) 50% 0 no-repeat fixed;
+#slide_2{
+	background: url(images/slide_2.jpg) 50% 0 no-repeat fixed;
 	color: white;
-	height: 1300px;
+	height: 600px;
 	margin: 0 auto;
 	overflow: hidden;
 	padding: 0;
@@ -108,18 +108,25 @@ h2{
 	z-index: 200;
 }
 
-#third{
-	background: url(images/thirdBG.jpg) 50% 0 no-repeat fixed;
+#slide_3{
+	background: url(images/slide_3.jpg) 53% 0 no-repeat fixed;
 	color: white;
 	height: 650px;
 	padding: 100px 0 0 0;	
 }
 
-#fifth{
-	background: #ccc;
-	height: 400px;
-	margin: 0 auto;
-	padding: 40px 0 0 0;
+#slide_4{
+	background: url(images/slide_4.jpg) 53% 0 no-repeat fixed;
+	color: white;
+	height: 650px;
+	padding: 100px 0 0 0;	
+}
+
+#slide_5{
+	background: url(images/slide_5.jpg) 53% 0 no-repeat fixed;
+	color: white;
+	height: 650px;
+	padding: 100px 0 0 0;	
 }
 
 .story{
@@ -130,7 +137,10 @@ h2{
 }
 
 .story .float-left, .story .float-right{
-	padding: 100px 0 0 0;
+    padding: 40px;
+    margin-top: 50px;
 	position: relative;
+    background-color: black;
+    opacity: 0.75;
 	width: 350px;	
 }
