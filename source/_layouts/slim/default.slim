@@ -16,10 +16,13 @@ html xmlns="http://www.w3.org/1999/xhtml"
         //!/xPosition - Horizontal position of the element
         //!/inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
         //!/outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-        $('#intro').parallax("50%", 0.1);
-        $('#second').parallax("50%", 0.1);
+        $('#slide_1').parallax("50%", 0.1);
+        $('#slide_2').parallax("50%", 0.1);
         $('.bg').parallax("50%", 0.4);
-        $('#third').parallax("50%", 0.3);
+        $('#slide_3').parallax("50%", 0.3);
+        $('#slide_4').parallax("50%", 0.3);
+        $('#slide_5').parallax("50%", 0.3);
+        $('#slide_6').parallax("50%", 0.3);
       
       })
   body
@@ -36,27 +39,61 @@ html xmlns="http://www.w3.org/1999/xhtml"
       li
         a href="#fifth" title=("Next Section") 
           img alt="Link" src="images/dot.png" /
-    #intro
+    #slide_1
       .story
         .float-left
-          h2 (Almost) Static Background
-          p This section has a background that moves slightly slower than the user scrolls. This is achieved by changing the top position of the background for every pixel the page is scrolled.
-      /! .story
-    /! #intro
-    #second
+          h2 Notre mission
+          p Les individus et leurs interactions plus que les processus et les outils.
+          p Du logiciel qui fonctionne plus qu’une documentation exhaustive.
+          p La collaboration avec les clients plus que la négociation contractuelle.
+          p L’adaptation au changement plus que le suivi d’un plan.
+
+    #slide_2
       .story
         .bg
         .float-right
-          h2 Multiple Backgrounds
-          p The multiple backgrounds applied to this section are moved in a similar way to the first section -- every time the user scrolls down the page by a pixel, the positions of the backgrounds are changed.
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh erat, sagittis sit amet congue at, aliquam eu libero. Integer molestie, turpis vel ultrices facilisis, nisi mauris sollicitudin mauris, volutpat elementum enim urna eget odio. Donec egestas aliquet facilisis. Nunc eu nunc eget neque ornare fringilla. Nam vel sodales lectus. Nulla in pellentesque eros. Donec ultricies, enim vitae varius cursus, risus mauris iaculis neque, euismod sollicitudin metus erat vitae sapien. Sed pulvinar.
-      /! .story
-    /! #second
-    #third
+          h2 Ce qui nous anime
+          p 
+            | La volonté de voir de belle chose ce concrétiser dans le milieu du logiciel.
+            | L’envie de lever les incompréhension entre les artisans et les clients.
+            | Donner l’envie de partager notre métier quelques soit la génération ou le sexe.
+
+    #slide_3
       .story
         .float-left
-          h2 What Happens When JavaScript is Disabled?
-          p The user gets a slap! Actually, all that jQuery does is moves the backgrounds relative to the position of the scrollbar. Without it, the backgrounds simply stay put and the user would never know they are missing out on the awesome! CSS2 does a good enough job to still make the effect look cool.
+          h2 Nos actions
+          p
+            |Nous organisons des évènements pour démocratiser notre visions. 
+            |Dans nos cartons nous avons :
+          p
+            | http://railsgirls.com 
+            | Coding dojo 
+            | http://fr.wikipedia.org/wiki/Coding_Dojo
+            | Où nous mettrons en pratiques les techniques de développement en binôme (pair programing)
+            | Hackathon 
+            | (par des dévs pour des dévs) http://fr.wikipedia.org/wiki/Hackathon
+            | Conférence sur l’artisanat logiciel
+
+            | #img http://unsplash.com/image/69929391711
+
+    #slide_4
+      .story
+        .float-right
+          h2 Nous contacter
+          p
+            |
+            | Nous joignable par mail : contact@artisanslogiciel.io
+            | Vous pouvez aussi nous croiser dans différents meetup : ruby sainté, ruby lyon, ou au mixeur de Saint-Étienne et autres espaces de coworking de france (quand nous y somme).
+            | tel : 0625223641 (Christophe) 0670031030 (Pierre-Alexandre)
+
+
+    #slide_5
+      .story
+        .float-right
+          h2 Qui somme nous ?
+          p Christophe chaudier : ‘TODO courte bio’
+          p Piarulli Pierre-Alexandre : ‘TODO courte bio’
+
       /! .story
     /! #third
     #fifth
